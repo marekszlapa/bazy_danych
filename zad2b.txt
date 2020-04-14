@@ -1,0 +1,27 @@
+Bazy danych – zale¿noœci funkcyjne
+
+1. 
+Zale¿noœci dla tabeli zamowienia:
+      id_produktu -> nazwa_produktu,cena_produktu,VAT
+      id_klienta -> nazwa_klienta
+      iloœæ, cena_produktu -> suma_netto
+      suma_netto, VAT -> suma_brutto
+      cena_produktu, suma_netto -> iloœæ
+      suma_netto, suma_brutto -> VAT
+
+
+2. 
+Klucze kandyduj¹ce:
+      id_klienta + id_produktu + data_zamowienia
+
+3.
+a) Zale¿noœci dla tabeli pomieszczenia:
+      id_pomieszczenia -> powierzchnia, liczba_okien, liczba_drzwi
+      kod_pocztowy -> miasto
+      miasto, ulica -> kod_pocztowy
+
+b) Klucze kandyduj¹ce:
+      id_pomieszczenia
+      id_budynku + numer_pomieszczenia
+
+
