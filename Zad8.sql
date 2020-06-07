@@ -36,7 +36,7 @@ WHERE CC.CreditCardID = SOH.CreditCardID AND SOH.SalesOrderID = @id);
 
 --5
 CREATE PROCEDURE
-dzielenie2 (@num1 FLOAT , @num2 FLOAT)
+dzielenie (@num1 FLOAT , @num2 FLOAT)
 AS
 BEGIN
 IF @num1 < @num2
@@ -45,5 +45,5 @@ ELSE
 	SELECT @num1/@num2 AS Wynik_dzielenia
 END;
 
---EXEC dzielenie2 @num1=10,@num2=2
---EXEC dzielenie2 @num1=2,@num2=10
+--EXEC dzielenie @num1=10,@num2=2
+--EXEC dzielenie @num1=2,@num2=10
